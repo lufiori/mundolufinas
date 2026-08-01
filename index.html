@@ -194,21 +194,32 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         <img src="produto.jpg" 
              alt="Nome do Produto"
              class="foto-produto">
-        <h2>
-            Cuscuzeira Individual Alumínio 1
-        </h2>
+        
+          <h2 class="titulo-produto"></h2>
+        
         <p>
             ✨ Produto escolhido com carinho.
         </p>
         <a href="https://meli.la/1ik4t9S"
            target="_blank"
            class="botao mercado">
-            🛒 Ver produto.2
+            🛒 Ver produto
         </a>
     </div>
 
+<div class="produto">
+    <img src="imagens/Cuscuzeira Individual Alumínio 1.png" class="produto-img">
+
+    <h2 class="titulo-produto"></h2>
+</div>
+
+
+
+
+    
     
 </div>        
+
 
 <!------------------------------------------------------------------------------------------------------------------- FIM DO BLOCO DE PRODUTOS -->        
 
@@ -266,7 +277,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 </div>
 
+<script>
+document.querySelectorAll(".produto").forEach(produto => {
 
+    let imagem = produto.querySelector(".produto-img");
+
+    let nomeArquivo = imagem.src
+        .split("/")
+        .pop()
+        .replace(".png", "")
+        .replaceAll("_", " ");
+
+    produto.querySelector(".titulo-produto").innerHTML = nomeArquivo;
+
+});
+</script>
+    
 
 <script src="script.js"></script>
 
