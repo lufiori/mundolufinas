@@ -209,7 +209,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     
 <div class="produto">
     <img src="imagens/conjunto fitness.png" class="produto-img">
-    <h2 class="titulo-produto"></h2>
+    <h2 class="titulo-produto">TESTE</h2>
 </div>
 
 
@@ -276,25 +276,31 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 </div>
 
-<script>
-document.querySelectorAll(".produto").forEach(produto => {
 
-    let imagem = produto.querySelector(".produto-img");
-
-    let nomeArquivo = imagem.src
-        .split("/")
-        .pop()
-        .replace(".png", "")
-        .replaceAll("_", " ");
-
-    produto.querySelector(".titulo-produto").innerHTML = nomeArquivo;
-
-});
-</script>
     
 
 <script src="script.js"></script>
 
+    
+
+<script>
+document.querySelectorAll(".produto").forEach(produto => {
+
+    const imagem = produto.querySelector(".produto-img");
+    const titulo = produto.querySelector(".titulo-produto");
+
+    const nome = imagem
+        .getAttribute("src")
+        .split("/")
+        .pop()
+        .replace(".png", "");
+
+    titulo.textContent = nome;
+
+});
+</script>
+
+    
 
 </body>
 
