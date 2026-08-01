@@ -219,9 +219,15 @@ footer{
 
 /* CARD DE PRODUTO */
 
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
 .produto{
 
-    width:50%;
+    width:100%;
 
     max-width:200px;
    
