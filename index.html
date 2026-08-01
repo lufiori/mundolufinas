@@ -284,18 +284,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     
 
 <script>
-document.querySelectorAll(".produto").forEach(produto => {
+document.addEventListener("DOMContentLoaded", function () {
 
-    const imagem = produto.querySelector(".produto-img");
-    const titulo = produto.querySelector(".titulo-produto");
+    document.querySelectorAll(".produto").forEach(function(produto) {
 
-    const nome = imagem
-        .getAttribute("src")
-        .split("/")
-        .pop()
-        .replace(".png", "");
+        const imagem = produto.querySelector(".produto-img");
+        const titulo = produto.querySelector(".titulo-produto");
 
-    titulo.textContent = nome;
+        if (imagem && titulo) {
+
+            let nome = imagem.getAttribute("src");
+
+            nome = nome.split("/").pop();
+            nome = nome.replace(/\.[^/.]+$/, ""); // remove qualquer extensão
+            nome = decodeURIComponent(nome);
+
+            titulo.textContent = nome;
+        }
+
+    });
 
 });
 </script>
