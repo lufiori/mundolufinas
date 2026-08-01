@@ -219,13 +219,17 @@ footer{
 
 /* CARD DE PRODUTO */
 
+.produtos {
+    display: flex;
+    gap: 20px; /* espaço entre os produtos */
+    justify-content: flex-start;
+    flex-wrap: wrap; /* quebra linha se não couber */
+}
+
 
 .produto{
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-   
+    width: 200px;
    
     margin-top:30px;
 
