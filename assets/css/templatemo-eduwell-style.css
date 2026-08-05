@@ -675,7 +675,7 @@ section.main-banner {
 }
 
 .main-banner {
-  padding-top: 10px;
+  padding-top: 3px;
 
 }
 
@@ -692,7 +692,7 @@ section.main-banner {
 
 .main-banner .right-image::after {
   position: absolute;
-  background-image: url(../images/banner-right-dec.png);
+
   width: 378px;
   height: 378px;
   content: '';
@@ -702,7 +702,7 @@ section.main-banner {
 
 .main-banner .header-text::after {
   position: absolute;
-  background-image: url(../images/banner-left-dec.png);
+
   width: 214px;
   height: 429px;
   content: '';
@@ -724,11 +724,11 @@ section.main-banner {
   position: relative;
   z-index: 2;
   margin-top: 20px;
-  font-size: 64px;
+  font-size: 34px;
   color: #111111;
   font-weight: 900;
   line-height: 74px;
-  margin-bottom: 40px;
+  margin-bottom: 3px;
 }
 
 .main-banner .header-text h2 em {
@@ -1109,7 +1109,7 @@ section.contact-us:after {
   background-image: url(../images/footer-left-dec.png);
   left: 0px;
   top: 60px;
-  width: 267px;
+  width: 367px;
   height: 396px;
   z-index: 1;
 }
@@ -1122,6 +1122,7 @@ section.contact-us .contact-info {
   z-index: 5;
   position: relative;
   padding: 20px;
+  
 }
 
 section.contact-us .contact-info .icon i {
@@ -1153,6 +1154,7 @@ section.contact-us .contact-info span {
 section.contact-us .section-heading {
   text-align: left;
   margin-bottom: 40px;
+  
 }
 
 section.contact-us #contact {
@@ -1164,6 +1166,7 @@ section.contact-us #contact {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
   padding: 40px;
+  
 }
 
 section.contact-us #contact input {
@@ -1335,6 +1338,7 @@ section.get-info .info-item h4 {
 
 section.our-team {
   position: relative;
+  top: 05px;
   width: 100%;   
 }
 
@@ -1344,7 +1348,7 @@ section.our-team .section-heading p {
 }
 
 section.our-team:before {
-  position: absolute;
+
   content: '';
   background-image: url(../images/our-courses-left-dec.png);
   left: 45px;
@@ -1356,7 +1360,7 @@ section.our-team:before {
 }
 
 section.our-team:after {
-  position: absolute;
+
   content: '';
   background-image: url(../images/our-courses-right-dec.png);
   right: 45px;
@@ -1378,14 +1382,14 @@ section.our-team .naccs .menu {
 }
 
 section.our-team .naccs .menu div {
-  margin: 0px 7px;
+  margin: 0px 0px;
   text-align: center;
   display: inline-block;
-  width: 9%;
+  width: 10%;
   text-align: center;
   font-size: 10px;
   color: #4d4c4c;
-  background-color: #fff;
+  background-color: #ffffff;
   cursor: pointer;
   vertical-align: middle;
   font-weight: 100;
@@ -1393,15 +1397,15 @@ section.our-team .naccs .menu div {
 }
 
 section.our-team .naccs .menu div img {
-  border-radius: 50%;
-  max-width: 80px;
+  border-radius: 100%;
+  max-width: 180px;
 }
 
 section.our-team .naccs .menu div h4 {
   font-size: 15px;
   font-weight: 900;
   margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 section.our-team .naccs .menu div span {
@@ -1510,17 +1514,21 @@ section.our-team ul.nacc li p {
 
 section.our-office .left-info {
   margin-right: 0px;
+
+  width: 700px;
   position: relative;
   z-index: 5;
   background-color: #fff;
-  margin-top: 40px;
+  margin-top: 150px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
   padding: 40px;
+
 }
 
 section.our-office .left-info p {
   margin-bottom: 40px;
+
 }
 
 section.our-office .left-info ul li {
@@ -1541,11 +1549,16 @@ section.our-office .left-info .main-button-gradient {
 }
 
 section.our-office #video {
-  margin-left: -70px;
+  
+  margin-top: 100px;
+  float: right;
+  
 }
 
 section.our-office #video .thumb {
+  width: 600px;
   position: relative;
+
 }
 
 section.our-office #video .thumb .play-button {
@@ -1570,6 +1583,7 @@ section.our-office #video .thumb .play-button a {
 
 section.our-office #video img {
   border-radius: 20px;
+
 }
 
 
