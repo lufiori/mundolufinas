@@ -63,5 +63,6 @@ if(document.getElementById("catalogo-beleza")){
     carregarProdutos("Pets","catalogo-pets");
     carregarProdutos("Tecnologia","catalogo-tecnologia");
     carregarProdutos("Utilidades","catalogo-utilidades");
+    carregarProdutos("Eletroeletronicos e Eletrodomésticos","catalogo-eletro");
 }
 
