@@ -1,43 +1,53 @@
-/* ==========================================
-   Mundo LuFiNas
-   script.js
-========================================== */
+async function carregarProdutos(categoria, destino){
 
-document.addEventListener("DOMContentLoaded", () => {
+    const resposta = await fetch("produtos.json");
+    const produtos = await resposta.json();
 
-    // Animação de entrada dos botões
-    const botoes = document.querySelectorAll(".botao");
+    const catalogo = document.getElementById(destino);
 
-    botoes.forEach((botao, index) => {
+    catalogo.innerHTML = "";
 
-        botao.style.opacity = "0";
-        botao.style.transform = "translateY(20px)";
+    produtos
+        .filter(produto => produto.categoria === categoria)
+        .forEach(produto=>{
 
-        setTimeout(() => {
+            catalogo.innerHTML += `
+            
+            <div class="blog-post">
+                <div class="thumb">
+                    <a href="${produto.link}" target="_blank">
+                        <img src="${produto.imagem}">
+                    </a>
+                </div>
+                <div class="down-content">
+                    <span class="category">
+                        R$ ${produto.preco}
+                    </span>
+                    <h4></h4>
+                    <p>${produto.descricao}</p>
 
-            botao.style.transition = "all .5s ease";
-            botao.style.opacity = "1";
-            botao.style.transform = "translateY(0)";
+                    <div class="border-first-button">
+                        <a href="${produto.link}" target="_blank">
+                            🛒 Ver (${produto.loja})
+                        </a>
+                        <span class="author">
+                            <p> </p>
+                        </span>
+                    </div>
+                </div>
+            </div>
 
-        }, 250 + (index * 120));
+            `;
 
-    });
-
-    // Pequeno efeito ao clicar
-    botoes.forEach(botao => {
-
-        botao.addEventListener("mousedown", () => {
-            botao.style.transform = "scale(.97)";
         });
 
-        botao.addEventListener("mouseup", () => {
-            botao.style.transform = "";
-        });
+}
 
-        botao.addEventListener("mouseleave", () => {
-            botao.style.transform = "";
-        });
-
-    });
-
-});
+carregarProdutos("Beleza","catalogo-beleza");
+carregarProdutos("Casa e Organização","catalogo-casa");
+carregarProdutos("Cozinha","catalogo-cozinha");
+carregarProdutos("Fitness e Saúde","catalogo-fitness");
+carregarProdutos("Moda e Acessórios","catalogo-moda");
+carregarProdutos("Pets","catalogo-pets");
+carregarProdutos("Tecnologia","catalogo-tecnologia");
+carregarProdutos("Utilidades","catalogo-utilidades");
