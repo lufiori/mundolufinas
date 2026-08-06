@@ -354,11 +354,11 @@ label { font-weight: 700; }
     text-transform: uppercase;
     color: white;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 15px;
     height: 100%;
 }
 
-.tm-tab-link:hover { color: white; }
+.tm-tab-link:hover { color: rgb(161, 156, 156); }
 
 .tm-tab-link-li {
     background: transparent;
@@ -375,8 +375,8 @@ label { font-weight: 700; }
 }
 
 .tab-pane {
-    max-width: 970px;
-    margin: 60px auto;
+    max-width: 1111px;
+    margin: 11px auto;
 }
 
 .tm-recommended-place {
@@ -396,11 +396,11 @@ label { font-weight: 700; }
     text-transform: uppercase;    
 }
 
-.tm-recommended-img { width: 270px; }
+.tm-recommended-img { width: 250px; }
 
 .tm-recommended-description-box {
     padding: 30px;
-    width: 500px;
+    width: 700px;
 }
 
 .tm-recommended-price-box {    
